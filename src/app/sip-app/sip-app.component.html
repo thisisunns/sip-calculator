@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIP Calculator</title>
+    <script>
+        function calculate() {
+            console.log("Submitted")
+        }
+    </script>
+</head>
+
+<body>
+    <marquee id="four">SIP Calculator..!</marquee>
+
+    <div class="container" style="text-align: center">
+        <h1>SIP Calculator</h1>
+        <label for="monthlysipAmount" style="color: darkblue; font-size: large;">Monthly SIP
+            Amount:</label>
+        <input type="text" placeholder="Enter SIP Amount" [(ngModel)]="monthlysipAmount" /><br /><br />
+
+        <label for="annualinterestRate" style="color: darkblue; font-size: large;">Annual Interest Rate: </label>
+        <input type="text" placeholder="Enter Interest Rate" [(ngModel)]="annualinterestRate" /><br /><br />
+
+        <label for="numberofYears" style="color: darkblue; font-size: large;">Number of Years: </label>
+        <input type="text" placeholder="Enter No of Years" [(ngModel)]="numberofYears" /><br /><br />
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="one">Expected Amount : ₹ {{monthlysipAmount | expectedamt:numberofYears:annualinterestRate | currency
+            : "INR" }}</p>
+        <p id="two">Amount Invested : ₹ {{monthlysipAmount * 12 * numberofYears | currency : "INR"}}</p>
+        <p id="three">Wealth Gain : ₹ {{monthlysipAmount | wealthgain:numberofYears:annualinterestRate | currency :
+            "INR"
+            }}</p>
+    </div>
+</body>
+
+</html>

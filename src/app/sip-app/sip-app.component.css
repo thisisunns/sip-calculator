@@ -1,0 +1,52 @@
+.h1 {
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.container {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 20px;
+    padding-top: 1px;
+    height: 400px;
+    width: 500px;
+    background-color: rgb(241, 225, 203);
+}
+
+#one {
+    color: darkblue;
+    font-size: medium;
+    text-align: left;
+    border-style: solid;
+    border-color: green;
+    margin-right: 250px;
+    margin-left: 20px;
+}
+
+#two {
+    color: darkblue;
+    font-size: medium;
+    text-align: left;
+    border-style: solid;
+    border-color: red;
+    margin-right: 250px;
+    margin-left: 20px;
+}
+
+#three {
+    color: darkblue;
+    font-size: medium;
+    text-align: left;
+    border-style: solid;
+    border-color: blueviolet;
+    margin-right: 250px;
+    margin-left: 20px;
+}
+
+#four {
+    color: blue;
+    font-size: medium;
+    font-family: Arial;
+}
